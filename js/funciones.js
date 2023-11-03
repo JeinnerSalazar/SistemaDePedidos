@@ -24,3 +24,11 @@ function borrarusuario(uid){
     }
 }
 
+function borrarproducto(pid){
+    var mensaje = confirm("¿Esta seguro de borrar el producto?");
+
+    if (mensaje==true){
+        window.location = "bloques/productos/borrar.php?id_producto=" + pid;
+    }
+}
+

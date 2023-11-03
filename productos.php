@@ -30,16 +30,15 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Pedidos</h1>
+        <h1 class="h2">Productos</h1>
       </div>
-      <button class="btn btn-primary" onclick="window.location='insertarpedido.php?control=0'">Ingresar pedido</button>
-      <br>
+      <?php require_once("bloques/productos/formulario.php"); ?>
       <br>
       <?php 
-        if(isset($_GET['id_cliente']) && $_GET['id_cliente'] > 0){
-          require_once("bloques/clientes/editar.php");
+        if(isset($_GET['id_producto']) && $_GET['id_producto'] > 0){
+          require_once("bloques/productos/editar.php");
         }else{
-          require_once("bloques/pedidos/consultar.php"); 
+          require_once("bloques/productos/consultar.php"); 
         }
         ?>
 
